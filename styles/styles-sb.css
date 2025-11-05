@@ -1,0 +1,351 @@
+/* CSS PAGINA SOBRE NÓS--------------------------------------------------------*/
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color:#fcfcfc;
+}
+
+
+/* --INICIO NAVBAR 1--*/
+.navbar-top {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social-link i{
+    font-size: 24px;
+    color: black;
+    margin-left: 20px;
+    transition: 0.1s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+.social-link i:hover{
+    color: brown;
+    text-decoration: none;
+}
+.social-link a{
+    text-decoration: none;
+}
+
+.logo h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: brown;
+}
+.logo h2:hover{
+    color:black;
+}
+
+.logo h2{
+    font-size: 22px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, brown, black, brown,brown);
+    background-size: 400% 100%;
+    animation: degrade 10s linear infinite alternate;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    outline: none;
+}
+
+@keyframes degrade {
+    0%{
+        background-position-x: 0%;
+    }
+
+    100%{
+        background-position: 400%;
+    }
+}
+.icons i{
+    font-size: 26px;
+    color: black;
+    margin-right: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.icons i:hover{
+    color: brown;
+}
+.icons a{
+    text-decoration: none;
+}
+.linha{
+    border-top: 1px solid black
+}
+/*responsive*/
+@media screen and (max-width: 400px){
+    .logo h{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 400px){
+    .social-link i{
+        width: 18px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .icons i{
+        width: 18px;
+    }
+}
+/* --FIM NAVBAR 1--*/
+
+/* --INICIO NAVBAR 2-- */
+.navbar-nav{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    margin-left: 90px;
+}
+.nav-link{
+    margin-right: 120px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.nav-link:hover{
+    color: brown;
+}
+/* --FIM NAVBAR 2-- /*/
+
+/* -- INICIO SECTION -- */
+
+/* banner  */
+.banner-sb img{
+    width: 100%;
+}
+/* fim banner */
+
+
+.herosb1{
+    width: 100%;
+    height: 300px;
+    padding: 0% 7%;
+    position: relative;
+    display: flex;
+    background-color: brown;
+}
+.herosb1-text{
+    color: #fff;
+    margin-top: 80px;
+    margin-right: 320px;
+    margin-left: 50px;
+}
+.herosb1-text p{
+    font-size: 15px;
+    line-height: 1.9;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.herosb1-img img{
+    margin-top: 40px;
+    height: 200px;
+}
+/* fim section 1 */
+
+/* section 2 */
+.herosb2{
+    width: 100%;
+    height: 300px;
+    padding: 0% 7%;
+    position: relative;
+    display: flex;
+    background-color: transparent;
+}
+.herosb2-text{
+    color: black;
+    margin-top: 80px;
+    margin-right: 80px;
+}
+.herosb2-text p{
+    font-size: 15px;
+    line-height: 1.9;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.herosb2-img img{
+    margin-top: 40px;
+    height: 200px;
+    margin-right: 300px;
+}
+/* fim section 2 */
+
+/* section 3 */
+.herosb3{
+    width: 100%;
+    height: 300px;
+    padding: 0% 7%;
+    position: relative;
+    display: flex;
+    background-color: brown;
+}
+.herosb3-text{
+    color: #fff;
+    margin-top: 70px;
+    margin-right: 320px;
+    margin-left: 50px;
+}
+.herosb3-text p{
+    font-size: 15px;
+    line-height: 1.9;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.herosb3-img img{
+    margin-top: 40px;
+    height: 200px;
+}
+/* fim section 3 */
+
+/* -- INICIO FOOTER --*/
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: black;
+    padding: 40px 100px;
+}
+.footer-col{
+   width: 22%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: brown;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links2 a{
+	font-size: 22px;
+    margin-left: 20px;
+    transition: 0.5s ease;
+    cursor: pointer;
+    display: inline-block;
+	height: 50px;
+	width: 50px;
+	background-color: black;
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 50%;
+	color:#bbbbbb ;
+	transition: all 0.5s ease;
+    
+}
+.footer-col .social-links2 a:hover{
+	color: brown;
+	background-color: #ffffff;
+}
+
+.social-links2 a {
+    text-decoration: none;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+/*--FIM FOOTER--*/
+
+
+/* Adaptações na Navbar e Footer */
+@media screen and (max-width: 767px) {
+    .navbar-nav {
+      margin-left: 0; /* Ajuste para ocupar toda a largura na versão mobile */
+      justify-content: space-evenly; /* Espaçamento uniforme entre os itens */
+    }
+  
+    .nav-link {
+      margin-right: 0; /* Remove a margem para melhorar o espaçamento entre os links */
+    }
+  
+    .icons i {
+      margin-right: 0; /* Ajuste para melhor espaçamento entre os ícones */
+    }
+  
+    .footer {
+      padding: 40px 20px; /* Redução do padding para melhorar a visualização em telas menores */
+    }
+  }
+  
+  /* Adaptações nos textos */
+  @media screen and (max-width: 574px) {
+    .herosb1-text,
+    .herosb2-text,
+    .herosb3-text {
+      margin-right: 0; /* Ajuste para espaçamento menor nos textos das seções */
+    }
+  
+    .herosb1-img img,
+    .herosb2-img img,
+    .herosb3-img img {
+      margin-right: 0; /* Ajuste para espaçamento menor entre a imagem e o texto */
+    }
+  }
+  
+  /* Adaptações gerais */
+  @media screen and (max-width: 400px) {
+    .logo h2 {
+      font-size: 18px; /* Redução do tamanho da fonte do logo para telas menores */
+    }
+  
+    .social-link i,
+    .icons i {
+      font-size: 18px; /* Redução do tamanho dos ícones para telas menores */
+    }
+  }
+  

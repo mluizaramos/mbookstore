@@ -1,0 +1,171 @@
+/* CSS PAGINA ADM--------------------------------------------------------*/
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color:#fcfcfc
+}
+
+
+/* --INICIO NAVBAR 1--*/
+.navbar-top {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social-link i{
+    font-size: 24px;
+    color: black;
+    margin-left: 20px;
+    transition: 0.1s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+.social-link i:hover{
+    color: brown;
+    text-decoration: none;
+}
+.social-link a{
+    text-decoration: none;
+}
+
+.logo h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: brown;
+}
+.logo h2:hover{
+    color:black;
+}
+
+.logo h2{
+    font-size: 22px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, brown, black, brown,brown);
+    background-size: 400% 100%;
+    animation: degrade 10s linear infinite alternate;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    outline: none;
+}
+
+@keyframes degrade {
+    0%{
+        background-position-x: 0%;
+    }
+
+    100%{
+        background-position: 400%;
+    }
+}
+.icons i{
+    font-size: 26px;
+    color: black;
+    margin-right: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.icons i:hover{
+    color: brown;
+}
+.icons a{
+    text-decoration: none;
+}
+.linha{
+    border-top: 1px solid black
+}
+/*responsive*/
+
+/* --FIM NAVBAR 1--*/
+
+/* --INICIO NAVBAR 2-- */
+.navbar-nav{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    margin-left: 90px;
+}
+.nav-link{
+    margin-right: 120px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.nav-link:hover{
+    color: brown;
+}
+/* --FIM NAVBAR 2-- /*/
+
+main{
+    padding: 20px 70px 70px 70px;
+}
+
+main h2{
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.titulo-adm h2{
+    color: brown;
+    margin-bottom: 5px;
+}
+
+#resultado h3{
+    margin-top: 30px;
+}
+
+/*fim main*/
+
+
+/* Para telas menores, como tablets e telefones */
+@media screen and (max-width: 768px) {
+    .navbar-top {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
+
+/* Para telas muito pequenas, como telefones em modo paisagem */
+@media screen and (max-width: 400px) {
+    .logo h2 {
+      font-size: 18px;
+    }
+  
+    .social-link i, .icons i {
+      font-size: 18px; 
+    }
+  
+
+    main {
+        padding: 10px;
+    }
+}

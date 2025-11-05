@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!--Inicio Head-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBOOKSTORE</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./styles/styles-car.css"> 
+
+    <!-- Link boxicons -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    
+    <!-- Link remixicons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Link google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!--Link Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    
+    <!--Link js-->
+    <script type="module" src="./scripts/carrinho.js" defer></script>
+
+    <!--Sweat Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!--Icone-->
+    <link rel="icon" type="image/x-icon" href=".\Imagens\Home\favicon.ico">
+
+</head>
+<!--Fim Head-->
+
+<!--Início Body-->
+<body>
+
+<!--Início Header -->
+<header>
+    <!--Início da Nav -->
+    <nav class="nav">
+        <!--Início do cabeçario 1 -->
+        <div class="container">
+            <div class="navbar-top">
+                <div class="social-link">
+                    <a href="https://www.facebook.com/login">
+                        <i class="ri-facebook-box-line"></i> 
+                    </a>
+                    <a href="https://www.instagram.com/accounts/login/" id="link-instagram" target="_blank">
+                        <i class="ri-instagram-line"></i> 
+                    </a>
+                    <a href="https://wa.me/whatsapp" id="link-youtube" target="_blank">
+                        <i class="ri-whatsapp-line"></i> 
+                    </a>
+                </div>
+                <div contenteditable="true" class="logo">
+                    <h2>MBOOKSTORE</h2>
+                </div>
+                <div class="icons">
+                    <a href="favoritos.html"><i class="ri-heart-line"></i></a>
+                    <a href="carrinho.html"><i class="ri-shopping-cart-2-line"></i></a>
+                    <a href="minha_conta.html"><i class="ri-account-circle-line"></i></a>
+                </div>
+            </div>
+            <hr class="linha">
+        </div>
+        <!-- fim do cabeçario 1 -->
+
+        <!--Início do cabeçario 2 -->
+        <div class="main-content">
+            <div class="navbar-nav">
+                <div class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="livros_produtos.html">Livros</a>
+                    <a class="nav-link" href="fale_conosco.html">Fale conosco</a>
+                    <a class="nav-link" href="sobre_nos.html">Sobre Nós</a>
+                    <a class="nav-link" href="minha_conta.html">Minha conta</a>
+                </div>
+            </div>
+            <hr class="linha">
+        </div>
+        <!-- Fim do cabeçario 2 -->
+    </nav>
+    <!--Fim Nav -->
+</header>
+<!--Fim Header -->
+
+<!--Inicio Main -->
+<main>
+    
+    <!--Inicio Section 1 -->
+    <section class="cart_container cart">   
+        <div class="titulo-cart">
+            <h2>Meu carrinho</h2>
+            <hr>
+        </div>
+    <ul>
+        <!-- Produto 1 no carrinho >
+        <li class="cart_item">
+            <img id="cart_img" scr="">
+            <p id="name_product_cart">O Poder do Hábito</p>
+            <div class="cart_item_container">
+                <input type="number" name="" id="">
+                <span>R$ 29,99</span>
+                <i class="bi-trash3"></i>
+            </div>
+        </li>
+        < Produto 2 no carrinho ->
+        <li class="cart_item">
+            <img id="cart_img" scr="">
+            <p>A Biblioteca da Meia-Noite</p>
+            <div class="cart_item_container">
+                <input type="number" name="" id="">
+                <span>R$ 32,99</span>
+                <i class="bi-trash3"></i>
+            </div>
+        </li>-->
+    </ul>
+    <!-- Valor total carrinho -->
+    <div class="qtd_price_area">
+        <span>0</span>
+        <span>R$ 00,00</span>
+    </div>
+
+    <div class="btn_area">
+        <a href="livros_produtos.html"><button>Ver Mais Produtos</button></a>
+        <button id="finalize">Finalizar</button>
+    </div>
+</section>
+<!--Fim Section 1 -->
+
+<!--Inicio Section 2 -->
+<section class="cart_container ">
+    <!--Informações sobre entrega-->
+    <div>
+        <h2>Endereço de Entrega</h2>
+    </div>
+    <form action="" id="address_form">
+        <label for="name">Nome Completo:</label>
+        <input type="text" id="nome" name="name">
+        <label for="name">Gênero:</label>
+        <select id="genero" onchange="selecionarGenero()" name="genero">
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+          </select>
+        <label for="logradouro">Logradouro:</label>
+        <input type="text" id="logradouro" name="logradouro">
+        <label for="Cidade">Complemento:</label>
+        <input type="text" id="complement" name="complement">
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="bairro">
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade">
+        <label for="estado">Estado:</label>
+        <select id="estado" onchange="selecionarEstado()" name="estado">
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+          </select>
+        <label for="estado">CEP:</label>
+        <input type="text" id="CEP" name="CEP">
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone">
+        <label for="e-mail">E-mail:</label>
+        <input type="email" id="email" name="email">
+    </form>
+</section>
+<!--Fim Section 2 -->
+</main>
+<!--Fim Main -->
+
+<!--Inicio Footer-->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Bookstory</h4>
+                <ul>
+                    <li><a href="sobre_nos.html">sobre nós</a></li>
+                    <li><a href="sobre_nos.html">trabalhe conosco</a></li>
+                    <li><a href="sobre_nos.html">politica de privacidade</a></li>
+                    <li><a href="sobre_nos.html">termos de uso</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Ajuda</h4>
+                <ul>
+                    <li><a href="fale_conosco.html">FAQ</a></li>
+                    <li><a href="fale_conosco.html">envios</a></li>
+                    <li><a href="fale_conosco.html">devoluções</a></li>
+                    <li><a href="fale_conosco.html">perguntas frequentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Fale conosco</h4>
+                <ul>
+                    <li><a href="fale_conosco.html">email</a></li>
+                    <li><a href="fale_conosco.html">telefones</a></li>
+                    <li><a href="fale_conosco.html">avalie</a></li>
+                    <li><a href="fale_conosco.html">contato-nos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Redes Sociais</h4>
+                <div class="social-links2">
+                    <a href="#"><i class="ri-facebook-box-line"></i>
+                    <a href="#"><i class="ri-instagram-line"></i>
+                    <a href="#"><i class="ri-whatsapp-line"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Fim Footer-->
+ 
+</body>
+<!--Fim Body-->
+
+</html>

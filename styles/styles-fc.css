@@ -1,0 +1,387 @@
+/* CSS PAGINA FALE CONOSCO--------------------------------------------------------*/
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color:#fcfcfc
+}
+
+/* --INICIO NAVBAR 1--*/
+.navbar-top {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social-link i{
+    font-size: 24px;
+    color: black;
+    margin-left: 20px;
+    transition: 0.1s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+.social-link i:hover{
+    color: brown;
+    text-decoration: none;
+}
+.social-link a{
+    text-decoration: none;
+}
+
+.logo h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: brown;
+}
+.logo h2:hover{
+    color:black;
+}
+
+.logo h2{
+    font-size: 22px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, brown, black, brown,brown);
+    background-size: 400% 100%;
+    animation: degrade 10s linear infinite alternate;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    outline: none;
+}
+
+@keyframes degrade {
+    0%{
+        background-position-x: 0%;
+    }
+
+    100%{
+        background-position: 400%;
+    }
+}
+.icons i{
+    font-size: 26px;
+    color: black;
+    margin-right: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.icons i:hover{
+    color: brown;
+}
+.icons a{
+    text-decoration: none;
+}
+.linha{
+    border-top: 1px solid black
+}
+/*responsive*/
+@media screen and (max-width: 400px){
+    .logo h{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 400px){
+    .social-link i{
+        width: 18px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .icons i{
+        width: 18px;
+    }
+}
+/* --FIM NAVBAR 1--*/
+
+/* --INICIO NAVBAR 2-- */
+.navbar-nav{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    margin-left: 90px;
+}
+.nav-link{
+    margin-right: 120px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.nav-link:hover{
+    color: brown;
+}
+/* --FIM NAVBAR 2-- /*/
+
+/* --INICIO SECTION-- */
+.container-fc {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: brown;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: brown;
+    border-radius: 100px;
+    color: #fff;
+    width: 622px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+button:hover{
+    transform: scale(1.010);
+    cursor: pointer;
+}
+/*responsive*/
+@media screen and (max-width: 767px) {
+    .container-fc {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    button {
+        margin-bottom: 10px;
+    }
+}
+/* --FIM SECTION-- */
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Cria duas colunas com largura igual */
+    /* Estilize as colunas conforme necessário */
+  }
+  
+.grid-item1 {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+   
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: brown;
+}
+
+h3 {
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: brown;
+}
+
+.social-links2 a {
+    text-decoration: none;
+}
+
+
+/* --INICIO FOOTER-- */
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: black;
+    padding: 40px 100px;
+}
+.footer-col{
+   width: 22%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: brown;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links2 a{
+	font-size: 22px;
+    margin-left: 20px;
+    transition: 0.5s ease;
+    cursor: pointer;
+    display: inline-block;
+	height: 50px;
+	width: 50px;
+	background-color: black;
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 50%;
+	color:#bbbbbb ;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links2 a:hover{
+	color: brown;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+/*--FIM FOOTER--*/
+
+/* ... Seu código CSS anterior ... */
+
+/* Responsive */
+
+/* Navbar 1 */
+@media screen and (max-width: 767px) {
+    .navbar-top {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo h2 {
+        font-size: 18px;
+    }
+    .social-link i {
+        font-size: 18px;
+    }
+    .icons i {
+        font-size: 18px;
+    }
+}
+
+/* Navbar 2 */
+@media screen and (max-width: 767px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+    .nav-link {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+}
+
+/* Section */
+@media screen and (max-width: 767px) {
+    .container-fc {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    button {
+        width: 100%; /* Ajuste para largura total */
+        margin-bottom: 10px;
+    }
+}
+
+/* Grid */
+@media screen and (max-width: 767px) {
+    .grid-item1 {
+        padding: 20px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 14px;
+    }
+}
+
+/* Footer */
+@media screen and (max-width: 767px) {
+    .footer-col {
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 574px) {
+    .footer-col {
+        padding: 0;
+    }
+}

@@ -1,0 +1,448 @@
+/* CSS PAGINA PRODUTO 1--------------------------------------------------------*/
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color:#fcfcfc;
+}
+
+
+/* --INICIO NAVBAR 1--*/
+.navbar-top {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social-link i{
+    font-size: 24px;
+    color: black;
+    margin-left: 20px;
+    transition: 0.1s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+.social-link i:hover{
+    color: brown;
+    text-decoration: none;
+}
+.social-link a{
+    text-decoration: none;
+}
+
+.logo h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: brown;
+}
+.logo h2:hover{
+    color:black;
+}
+
+.logo h2{
+    font-size: 22px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, brown, black, brown,brown);
+    background-size: 400% 100%;
+    animation: degrade 10s linear infinite alternate;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    outline: none;
+}
+
+@keyframes degrade {
+    0%{
+        background-position-x: 0%;
+    }
+
+    100%{
+        background-position: 400%;
+    }
+}
+.icons i{
+    font-size: 26px;
+    color: black;
+    margin-right: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.icons i:hover{
+    color: brown;
+}
+.icons a{
+    text-decoration: none;
+}
+.linha{
+    border-top: 1px solid black
+}
+/*responsive*/
+@media screen and (max-width: 400px){
+    .logo h{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 400px){
+    .social-link i{
+        width: 18px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .icons i{
+        width: 18px;
+    }
+}
+/* --FIM NAVBAR 1--*/
+
+/* --INICIO NAVBAR 2-- */
+.navbar-nav{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    margin-left: 90px;
+}
+.nav-link{
+    margin-right: 120px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.nav-link:hover{
+    color: brown;
+}
+/* --FIM NAVBAR 2-- /*/
+
+/* --INICIO SECTION 1 PRODUTO*/
+.img_product_container {
+    display: flex;
+    max-width: 1440px;
+    justify-content:center;
+    column-gap: 40px;
+    margin-top: 70px;
+    margin-bottom: 60px;
+}
+
+.product_info_image, .product_info {
+    width: 600px;
+}
+
+.product_info_image img {
+    width: 420px;
+    margin-left: 100px;
+    object-fit: cover;
+}
+
+.product_info_image img:hover {
+    transform: scale(1.10);
+    cursor: pointer;
+}
+.product_info h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.product_info h5 {
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.product_info i {
+    color: #facc14;
+}
+
+.product_info span {
+    display:block;
+    font-size: 24px;
+    margin-top: 15px;
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+
+.product_info input, .cart_item_container input {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        padding: 2px 2px;
+        border-radius: 30px;
+        border: 1px solid ;
+        /* text-align: center; */
+        padding-left: 10px;
+        margin-bottom: 50px;
+        margin-right:20px;
+    }
+    
+    .product_info button{
+        display: inline-block;
+        color:white;
+        background: brown;
+        border: 1px solid transparent;
+        padding: 8px 30px;
+        line-height: 1.4;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 70px;
+    }
+    .product_info button:hover {
+        transform: scale(1.020);
+        cursor: pointer;
+        background-color: #000;
+    }
+    .product_info p {
+        font-family: 'Inter', sans-serif;
+        font-size:14px;
+        line-height: 24px;
+    }
+
+    .btn_area {
+        display: flex;
+        justify-content: flex-end;
+        padding: 15px 0;
+    }
+
+    .btn_area button:first-child {
+            margin-right: 20px;
+            background-color: #fff;
+            color: #000;
+    }
+
+
+/* section 2 */
+.hero2{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+}
+.hero2-text{
+    height: 90px;
+}
+.hero2-text h2{
+    font-size: 25px;
+    margin-top: 80px;
+}
+.hero2-text p{
+    font-size: 17px;
+    margin-top: 10px;
+}
+.hero2-img{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.hero2-img img{
+    width: 220px;
+    padding: 10px;
+}
+.hero2-img img:hover{
+    cursor: pointer;
+    transform: scale(1.070);
+}
+
+/* fim section 2 */
+/* --FIM SECTION PRODUTO*/
+
+/* --INICIO FOOTER-- */
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: black;
+    padding: 40px 100px;
+}
+.footer-col{
+   width: 22%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: brown;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links2 a{
+	font-size: 22px;
+    margin-left: 20px;
+    transition: 0.5s ease;
+    cursor: pointer;
+    display: inline-block;
+	height: 50px;
+	width: 50px;
+	background-color: black;
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 50%;
+	color:#bbbbbb ;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links2 a:hover{
+	color: brown;
+	background-color: #ffffff;
+}
+
+.social-links2 a {
+    text-decoration: none;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+/*--FIM FOOTER--*/
+    
+
+/* CSS PAGINA PRODUTO 1--------------------------------------------------------*/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fcfcfc;
+}
+
+/* --INICIO NAVBAR 1--*/
+.navbar-top {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-link i {
+    font-size: 24px;
+    color: black;
+    margin-left: 20px;
+    transition: 0.1s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* ... (Seus estilos para .social-link i e .social-link a continuam) ... */
+
+/*responsive*/
+@media screen and (max-width: 767px) {
+    .navbar-top {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        height: auto;
+        display: none;
+        flex-direction: column;
+        text-align: left;
+        justify-content: flex-start;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .nav-link {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .logo h2 {
+        font-size: 18px;
+    }
+
+    .social-link i {
+        font-size: 18px;
+    }
+
+    .icons i {
+        font-size: 18px;
+    }
+}
+
+/* --FIM NAVBAR 1--*/
+
+/* --INICIO SECTION 1 PRODUTO*/
+/* ... (Seus estilos para .img_product_container, .product_info_image, etc., continuam) ... */
+
+/*responsive*/
+@media screen and (max-width: 767px) {
+    .img_product_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product_info_image img {
+        margin-left: 0;
+    }
+
+    .product_info {
+        text-align: center;
+    }
+}
+
+/* --FIM SECTION PRODUTO*/
+
+/* --INICIO FOOTER-- */
+/* ... (Seus estilos para .row, .footer, .footer-col, etc., continuam) ... */
+
+/*responsive*/
+@media (max-width: 767px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+/* --FIM FOOTER-- */
