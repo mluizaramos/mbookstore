@@ -286,43 +286,6 @@ ul{
 
 /*--FIM FOOTER--*/
 
-/*responsive*/
-@media screen and (max-width: 768px) {
-    .navbar-top {
-        flex-direction: column;
-        justify-content: center;
-        height: auto;
-    }
-
-    .social-link i,
-    .icons i {
-        font-size: 16px;
-    }
-
-    .logo h2 {
-        font-size: 16px;
-    }
-}
-
-/* --FIM NAVBAR 1--*/
-
-/* --INICIO NAVBAR 2-- */
-/* ... (seu código existente) ... */
-/*responsive*/
-@media screen and (max-width: 768px) {
-    .navbar-nav {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
-    }
-
-    .nav-link {
-        margin: 10px 0;
-    }
-}
-/* --FIM NAVBAR 2-- */
-
-
 
 .pag_login{
     background-color: #F7F7F7;

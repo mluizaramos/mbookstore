@@ -327,65 +327,6 @@ body {
     background-color: #fcfcfc;
 }
 
-/* --INICIO NAVBAR 1--*/
-.navbar-top {
-    width: 100%;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.social-link i {
-    font-size: 24px;
-    color: black;
-    margin-left: 20px;
-    transition: 0.1s ease;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-/* ... (Seus estilos para .social-link i e .social-link a continuam) ... */
-
-/*responsive*/
-@media screen and (max-width: 767px) {
-    .navbar-top {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-left: 0;
-    }
-
-    .navbar-nav {
-        width: 100%;
-        height: auto;
-        display: none;
-        flex-direction: column;
-        text-align: left;
-        justify-content: flex-start;
-        margin-left: 0;
-        margin-top: 20px;
-    }
-
-    .nav-link {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .logo h2 {
-        font-size: 18px;
-    }
-
-    .social-link i {
-        font-size: 18px;
-    }
-
-    .icons i {
-        font-size: 18px;
-    }
-}
-
-/* --FIM NAVBAR 1--*/
-
 /* --INICIO SECTION 1 PRODUTO*/
 /* ... (Seus estilos para .img_product_container, .product_info_image, etc., continuam) ... */
 

@@ -113,34 +113,6 @@ main h2{
 
 /*fim main*/
 
-
-/* Para telas menores, como tablets e telefones */
-@media screen and (max-width: 768px) {
-    .navbar-top {
-        height: auto;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 20px;
-    }
-
-    .navbar-nav {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-        margin-left: 0;
-    }
-
-    .nav-link {
-        margin: 10px 0;
-    }
-
-    main {
-        padding: 20px;
-    }
-}
-
 /* Para telas muito pequenas, como telefones em modo paisagem */
 @media screen and (max-width: 400px) {
     .logo h2 {

@@ -300,40 +300,7 @@ ul{
 
 /*--FIM FOOTER--*/
 
-/* ... Seu código CSS anterior ... */
-
 /* Responsive */
-
-/* Navbar 1 */
-@media screen and (max-width: 767px) {
-    .navbar-top {
-        height: auto;
-        flex-direction: column;
-        align-items: center;
-    }
-    .logo h2 {
-        font-size: 18px;
-    }
-    .social-link i {
-        font-size: 18px;
-    }
-    .icons i {
-        font-size: 18px;
-    }
-}
-
-/* Navbar 2 */
-@media screen and (max-width: 767px) {
-    .navbar-nav {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
-    }
-    .nav-link {
-        margin: 5px 0;
-        font-size: 14px;
-    }
-}
 
 /* Section */
 @media screen and (max-width: 767px) {

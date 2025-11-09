@@ -572,37 +572,6 @@ ul{
 
 /*--FIM FOOTER--*/
 
-/* Adicione essa seção no final do seu CSS para a responsividade */
-
-/* Para telas menores que 1200px */
-@media (max-width: 1200px) {
-    .navbar-nav {
-        margin-left: 50px;
-    }
-}
-
-/* Para telas menores que 992px */
-@media (max-width: 992px) {
-    .navbar-top {
-        height: auto;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .social-link i, .icons i {
-        font-size: 20px;
-    }
-    .logo h2 {
-        font-size: 18px;
-    }
-    .navbar-nav {
-        margin-left: 0;
-        justify-content: center;
-    }
-    .nav-link {
-        margin-right: 40px;
-    }
-}
-
 /* Para telas menores que 768px */
 @media (max-width: 768px) {
     .hero {
@@ -630,13 +599,13 @@ ul{
 }
 
 /* Para telas menores que 576px */
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
     .logo h2 {
-      font-size: 16px; /* Redução do tamanho da fonte do logo para telas menores */
+      font-size: 16px; 
     }
   
     .social-link i, .icons i {
-      font-size: 16px; /* Redução do tamanho dos ícones para telas menores */
+      font-size: 16px; 
     }
   
     .hero-text h1 {
@@ -652,4 +621,4 @@ ul{
     .hero-img img {
         height: 300px;
     }
-}
+} */
