@@ -153,25 +153,36 @@ body{
 }
 /* --FIM SECTION FAV PRODUTOS-- */
 
+/* LINE */
+
+.linha-separadora {
+  border: none;
+  border-top: 1px solid #efefef;
+  width: 90%;
+  margin: 20px auto;
+}
+
+
 /* --INICIO FOOTER-- */
 .row{
 	display: flex;
 	flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
 }
 ul{
 	list-style: none;
 }
 .footer{
-	background-color: black;
-    padding: 40px 100px;
+    padding: 40px 10px;
 }
 .footer-col{
-   width: 22%;
-   padding: 0 15px;
+   padding: 0 35px;
 }
 .footer-col h4{
-	font-size: 18px;
-	color: #ffffff;
+	font-size: 16px;
+    font-weight: 600;
+	color: black;
 	text-transform: capitalize;
 	margin-bottom: 35px;
 	font-weight: 500;
@@ -191,42 +202,31 @@ ul{
 	margin-bottom: 10px;
 }
 .footer-col ul li a{
-	font-size: 16px;
+	font-size: 14px;
 	text-transform: capitalize;
-	color: #ffffff;
 	text-decoration: none;
 	font-weight: 300;
-	color: #bbbbbb;
+	color: #a7a7a7;
 	display: block;
 	transition: all 0.3s ease;
 }
 .footer-col ul li a:hover{
-	color: #ffffff;
+	color: #000000;
 	padding-left: 8px;
 }
 .footer-col .social-links2 a{
-	font-size: 22px;
-    margin-left: 20px;
-    transition: 0.5s ease;
+	font-size: 20px;
     cursor: pointer;
     display: inline-block;
-	height: 50px;
-	width: 50px;
-	background-color: black;
 	margin:0 10px 10px 0;
 	text-align: center;
 	line-height: 50px;
-	border-radius: 50%;
-	color:#bbbbbb ;
+	color:#a7a7a7;
 	transition: all 0.5s ease;
+    text-decoration: none;
 }
 .footer-col .social-links2 a:hover{
 	color: brown;
-	background-color: #ffffff;
-}
-
-.social-links2 a {
-    text-decoration: none;
 }
 
 /*responsive*/

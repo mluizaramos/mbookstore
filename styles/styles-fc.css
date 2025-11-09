@@ -214,12 +214,21 @@ button:hover{
     text-decoration: none;
 }
 
+/* LINE */
+
+.linha-separadora {
+  border: none;
+  border-top: 1px solid #efefef;
+  width: 90%;
+  margin: 20px auto;
+}
+
 
 /* --INICIO FOOTER-- */
 .row{
 	display: flex;
 	flex-wrap: wrap;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 }
 ul{
@@ -267,19 +276,15 @@ ul{
 	padding-left: 8px;
 }
 .footer-col .social-links2 a{
-	font-size: 22px;
-    margin-left: 20px;
-    transition: 0.5s ease;
+	font-size: 20px;
     cursor: pointer;
     display: inline-block;
-	height: 50px;
-	width: 50px;
 	margin:0 10px 10px 0;
 	text-align: center;
 	line-height: 50px;
-	border-radius: 50%;
 	color:#a7a7a7;
 	transition: all 0.5s ease;
+    text-decoration: none;
 }
 .footer-col .social-links2 a:hover{
 	color: brown;
