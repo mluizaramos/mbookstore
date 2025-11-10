@@ -20,8 +20,8 @@ export function carregaProdutos1 (lista, gridProduto){
         <img src="${item.imagemProduto}" alt="Produto 1" id="${item.codigoProduto}"> 
    </a>
     <button class="favorite-button"><i class="ri-heart-line"></i></button>
-    <h4 class="titulo-pd">${item.nomeProduto}</h4>
-    <p class="price">R$${item.preco}</p>
+    <p class="titulo-pd">${item.nomeProduto}</p>
+    <p class="price">Por: R$${item.preco}</p>
     <a href="produto.html"><button class="buy-button-pd" id="${item.codigoProduto}">Comprar</button></a>
 </div>`
     gridProduto.innerHTML += html
