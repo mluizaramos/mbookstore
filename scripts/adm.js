@@ -1,21 +1,41 @@
 let data = JSON.parse(localStorage.getItem("pedidos"));
 const resultadoDiv = document.getElementById('resultado');
 
+data.sort((a, b) => b.id - a.id);
+
 data.forEach(pedido => {
-    
-    resultadoDiv.innerHTML += `<h3>Itens do Pedido ${pedido.id}:</h3>`;
-    resultadoDiv.innerHTML += '<hr>';
-    resultadoDiv.innerHTML += `<h4>Cliente ${pedido.endereco.nome}</h4>`;
-    
-    resultadoDiv.innerHTML += '<ul>';
 
-    pedido.itens.forEach(item => {
+    let totalPedido = pedido.itens.reduce((acc, item) => {
+        return acc + (item.preco * item.quantidade);
+    }, 0);
 
-        resultadoDiv.innerHTML += `<li>Título: ${item.nomeProduto}</li>`;
-        resultadoDiv.innerHTML += `<li>Quantidade: ${item.quantidade}</li>`;
-        resultadoDiv.innerHTML += `<li>Preço: $${item.preco.toFixed(2)}</li>`;
-        resultadoDiv.innerHTML += '<hr>';
-    });
+    resultadoDiv.innerHTML += `
+        <div class="pedido-box">
+            <p class="title-order">Pedido Nº ${pedido.id}</p>
+            <p class="cliente-nome">Cliente: ${pedido.endereco.nome}</p>
 
-    resultadoDiv.innerHTML += '</ul>';
+            <table class="tabela-pedidos">
+                <thead>
+                    <tr>
+                        <th>Título do Livro</th>
+                        <th>Quantidade</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${pedido.itens.map(item => `
+                        <tr>
+                            <td>${item.nomeProduto}</td>
+                            <td>${item.quantidade}</td>
+                            <td>R$ ${item.preco.toFixed(2)}</td>
+                        </tr>
+                    `).join("")}
+                </tbody>
+            </table>
+
+            <p class="total-compra">
+                Total do Pedido: <strong>R$ ${totalPedido.toFixed(2)}</strong>
+            </p>
+        </div>
+    `;
 });

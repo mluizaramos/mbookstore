@@ -197,10 +197,13 @@ export function deletarItem(listaCarrinhoDeCompras,valorTotalQuantidade){
 }
 
 //essa função armazena os pedidos gerados na pagina do administrador
-export function gerarPedido(listaCarrinhoDeCompras,pedidos){
-  
-    let id = pedidos.length
-     if (pedidos == null || pedidos == 0){id = 1}
+export function gerarPedido(listaCarrinhoDeCompras, pedidos) {
+
+    let novoId = 1;
+
+    if (pedidos && pedidos.length > 0) {
+        novoId = Math.max(...pedidos.map(p => p.id)) + 1;
+    }
 
     let endereco = {
         nome: document.querySelector("input#nome").value,
@@ -212,19 +215,19 @@ export function gerarPedido(listaCarrinhoDeCompras,pedidos){
         CEP: document.querySelector("input#CEP").value,
         telefone: document.querySelector("input#telefone").value,
         email: document.querySelector("input#email").value
-         }
+    }
 
     let pedido = {
-        id: id + 1,
+        id: novoId,
         itens: listaCarrinhoDeCompras,
         endereco: endereco
     }
 
-    pedidos.push(pedido)
-    localStorage.setItem("pedidos",JSON.stringify(pedidos))
-    localStorage.removeItem('carrinho')
-    localStorage.removeItem('IdProd')
-    alert("Compra realizada com sucesso!")
-    location.reload()
+    pedidos.push(pedido);
+    localStorage.setItem("pedidos", JSON.stringify(pedidos));
+    localStorage.removeItem('carrinho');
+    localStorage.removeItem('IdProd');
 
-    }
+    alert("Compra realizada com sucesso!");
+    location.reload();
+}

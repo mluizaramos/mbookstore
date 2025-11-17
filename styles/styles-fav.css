@@ -112,6 +112,7 @@ body{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: space-between;
 }
+
 .product-pd {
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -120,18 +121,22 @@ body{
     position: relative;
     text-align: center;
 }
+
 .product-pd img {
     max-width: 100%;
     height: auto;
     cursor: pointer;
 }
+
 .product-pd img:hover {
     transform: scale(1.060);
     cursor: pointer;
 }
+
 .ri-heart-line h4{
     color: #000;
 }
+
 .price {
     margin-top: 10px;
     font-size: larger;
@@ -140,6 +145,7 @@ body{
     font-weight: bold;
     color: brown;
 }
+
 .buy-button-pd {
     background-color: brown;
     border-radius: 80px;
@@ -156,6 +162,7 @@ body{
     transform: scale(1.070);
     cursor: pointer;
 }
+
 .titulo-pg h3{
     margin-top: 40px;
     margin-bottom: 30px;

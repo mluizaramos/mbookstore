@@ -93,22 +93,177 @@ body{
 }
 /* --FIM NAVBAR 1--*/
 
-main{
-    padding: 20px 70px 70px 70px;
+.box-adm{
+    background-color: #F7F7F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
 }
 
-main h2{
-    margin-bottom: 15px;
-    margin-top: 20px;
+.container-adm {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 0px 30px;
+    box-shadow: 1px 5px 7px 1px rgba(105, 105, 105, 0.2);
+    overflow: hidden; 
 }
 
-.titulo-adm h2{
+#resultado {
+    flex: 1;
+    overflow-y: auto; 
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+#resultado::-webkit-scrollbar {
+    width: 8px;
+}
+
+#resultado::-webkit-scrollbar-track {
+    background: #eee;
+    border-radius: 10px;
+}
+
+#resultado::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 10px;
+}
+
+.header-adm {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.header-adm img {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.adm-title {
     color: brown;
-    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 200;
 }
 
-#resultado h3{
-    margin-top: 30px;
+
+.order-adm {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.order-title {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.pedido-box {
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 25px;
+    border: 1px solid #f1f1f1;
+}
+
+.pedido-box .title-order {
+    margin-bottom: 5px;
+    color: brown;
+    font-weight: 600;
+}
+
+.cliente-nome {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555;
+}
+
+.tabela-pedidos {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 15px;
+}
+
+.tabela-pedidos th,
+.tabela-pedidos td {
+    white-space: nowrap;  
+    overflow: hidden;    
+    text-overflow: ellipsis;
+}
+
+.tabela-pedidos thead {
+    background-color: #f7f7f7;
+}
+
+.tabela-pedidos th {
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+}
+
+.tabela-pedidos td {
+    padding: 10px;
+}
+
+.tabela-pedidos tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.tabela-pedidos th:nth-child(1),
+.tabela-pedidos td:nth-child(1) {
+    width: 55%; /* título */
+}
+
+.tabela-pedidos th:nth-child(2),
+.tabela-pedidos td:nth-child(2) {
+    width: 15%; /* quantidade */
+    text-align: center;
+}
+
+.tabela-pedidos th:nth-child(3),
+.tabela-pedidos td:nth-child(3) {
+    width: 30%; /* preço */
+    text-align: right;
+}
+
+.tabela-pedidos tr:hover {
+    background-color: #efefef;
+}
+
+.total-compra {
+    margin-top: 15px;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+
+@media (max-width: 600px) {
+
+    .box-adm {
+        padding: 20px 0;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .container-adm {
+        width: 80%;
+        padding: 0px 20px;
+        height: 90%;
+        margin-bottom: 30px;  
+    }
+
+    #resultado {
+        padding-bottom: 30px; 
+    }
 }
 
 /*fim main*/
@@ -125,6 +280,6 @@ main h2{
   
 
     main {
-        padding: 10px;
+        padding: 0px;
     }
 }
