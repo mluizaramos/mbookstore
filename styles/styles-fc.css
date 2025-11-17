@@ -180,11 +180,6 @@ button:hover{
    
 }
 
-.grid-item2 {
-    display: flex;
-    align-items: center;
-}
-
 .title-help {
     font-size: 20px;
     font-weight: 600;
@@ -214,6 +209,26 @@ button:hover{
     text-decoration: none;
 }
 
+/* rensponsive */
+@media screen and (max-width: 767px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-item2 {
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .container-fc {
+        padding-right: 0;
+    }
+}
+
+
 /* LINE */
 
 .linha-separadora {
@@ -223,7 +238,6 @@ button:hover{
   margin: 20px auto;
 }
 
-
 /* --INICIO FOOTER-- */
 .row{
 	display: flex;
@@ -231,15 +245,19 @@ button:hover{
     align-items: start;
     justify-content: center;
 }
+
 ul{
 	list-style: none;
 }
+
 .footer{
     padding: 40px 10px;
 }
+
 .footer-col{
    padding: 0 35px;
 }
+
 .footer-col h4{
 	font-size: 16px;
     font-weight: 600;
@@ -249,6 +267,7 @@ ul{
 	font-weight: 500;
 	position: relative;
 }
+
 .footer-col h4::before{
 	content: '';
 	position: absolute;
@@ -259,9 +278,11 @@ ul{
 	box-sizing: border-box;
 	width: 50px;
 }
+
 .footer-col ul li:not(:last-child){
 	margin-bottom: 10px;
 }
+
 .footer-col ul li a{
 	font-size: 14px;
 	text-transform: capitalize;
@@ -271,10 +292,12 @@ ul{
 	display: block;
 	transition: all 0.3s ease;
 }
+
 .footer-col ul li a:hover{
 	color: #000000;
 	padding-left: 8px;
 }
+
 .footer-col .social-links2 a{
 	font-size: 20px;
     cursor: pointer;
@@ -286,67 +309,25 @@ ul{
 	transition: all 0.5s ease;
     text-decoration: none;
 }
+
 .footer-col .social-links2 a:hover{
 	color: brown;
 }
 
 /*responsive*/
 @media(max-width: 767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
-}
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
 }
 @media(max-width: 574px){
-  .footer-col{
-    width: 100%;
-}
+    .footer-col{
+        width: 100%;
+    }
 }
 
 /*--FIM FOOTER--*/
 
 /* Responsive */
 
-/* Section */
-@media screen and (max-width: 767px) {
-    .container-fc {
-        padding: 10px;
-    }
-    h1 {
-        font-size: 20px;
-        margin-top: 10px;
-        margin-bottom: 5px;
-    }
-    button {
-        width: 100%; /* Ajuste para largura total */
-        margin-bottom: 10px;
-    }
-}
-
-/* Grid */
-@media screen and (max-width: 767px) {
-    .grid-item1 {
-        padding: 20px;
-    }
-    h2 {
-        font-size: 20px;
-    }
-    h3 {
-        font-size: 14px;
-    }
-}
-
-/* Footer */
-@media screen and (max-width: 767px) {
-    .footer-col {
-        width: 100%;
-        margin-bottom: 30px;
-        padding: 0 15px;
-    }
-}
-
-@media screen and (max-width: 574px) {
-    .footer-col {
-        padding: 0;
-    }
-}
