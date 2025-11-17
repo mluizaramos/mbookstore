@@ -142,87 +142,221 @@ body{
     font-weight: 500;
 }
 
-.product_info input, .cart_item_container input {
-        width: 30px;
-        height: 30px;
-        font-size: 20px;
-        padding: 2px 2px;
-        border-radius: 30px;
-        border: 1px solid ;
-        /* text-align: center; */
-        padding-left: 10px;
-        margin-bottom: 50px;
-        margin-right:20px;
-    }
-    
-    .product_info button{
-        display: inline-block;
-        color:white;
-        background: brown;
-        border: 1px solid transparent;
-        padding: 8px 30px;
-        line-height: 1.4;
-        font-size: 14px;
-        font-weight: 500;
-        border-radius: 70px;
-    }
-    .product_info button:hover {
-        transform: scale(1.020);
-        cursor: pointer;
-        background-color: #000;
-    }
-    .product_info p {
-        font-family: 'Inter', sans-serif;
-        font-size:14px;
-        line-height: 24px;
-    }
+#Buy-pd {
+    display: inline-block;
+    color:white;
+    background: brown;
+    border: 1px solid transparent;
+    padding: 6px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 70px;
+}
 
-    .btn_area {
-        display: flex;
-        justify-content: flex-end;
-        padding: 15px 0;
-    }
+#Buy-pd:hover {
+    transform: scale(1.020);
+    cursor: pointer;
+    background-color: #000;
+}
 
-    .btn_area button:first-child {
-            margin-right: 20px;
-            background-color: #fff;
-            color: #000;
-    }
+.action-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 25px;
+}
 
+
+.quantity-container {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #d1d1d1;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 34px;
+    background-color: #fff;
+}
+
+/* Botões - e + */
+.qty-btn {
+    width: 10px;
+    height: 100%;
+    background-color: #fff;
+    border: none;
+    font-size: 22px;
+    font-weight: 200;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s ease;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.qty-btn:hover {
+    color: brown;
+}
+
+/* Input */
+.qty-input {
+    width: 16px;
+    height: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-weight: 400;
+    background-color: #fff;
+    appearance: textfield;
+}
+
+/* Remover setinhas do input number */
+.qty-input::-webkit-inner-spin-button,
+.qty-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
 
 /* section 2 */
+
+
 .hero2{
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin-top: 90px;
 }
+
 .hero2-text{
     height: 90px;
 }
-.hero2-text h2{
-    font-size: 25px;
-    margin-top: 80px;
+
+.more-books{
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: 22px;
 }
-.hero2-text p{
-    font-size: 17px;
-    margin-top: 10px;
-}
+
 .hero2-img{
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 10px;
+    margin-bottom: 40px;
 }
+
 .hero2-img img{
-    width: 220px;
-    padding: 10px;
+    width: 150px;
 }
+
 .hero2-img img:hover{
     cursor: pointer;
     transform: scale(1.070);
 }
 
+
+
 /* fim section 2 */
 /* --FIM SECTION PRODUTO*/
+
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+
+/* Tablet e telas médias */
+@media (max-width: 992px) {
+
+    .img_product_container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .product_info_image img {
+        width: 300px;
+        margin-left: 0;
+    }
+
+    .product_info {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .action-row {
+        justify-content: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .img_product_container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+        column-gap: 0;
+    }
+
+    .product_info_image img {
+        width: 260px;
+        margin-left: 0;
+    }
+
+    .product_info h2 {
+        font-size: 22px;
+    }
+
+    .product_info h5 {
+        font-size: 16px;
+    }
+
+    .product_info span {
+        font-size: 20px;
+    }
+
+    /* Linha de quantidade + comprar */
+    .action-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /* Ajustar componente de quantidade */
+    .quantity-container {
+        height: 38px;
+        border-radius: 24px;
+        padding: 0 6px;
+    }
+
+    .qty-btn {
+        padding-left: 14px;
+        padding-right: 14px;
+        font-size: 20px;
+    }
+
+    .qty-input {
+        width: 26px;
+        font-size: 18px;
+    }
+
+    /* Botão comprar maior no mobile */
+    #Buy-pd {
+        width: 70%;
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    /* Seção dos outros livros */
+    .hero2-img {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        justify-items: center;
+        margin-top: 20px;
+    }
+
+    .hero2-img img {
+        width: 180px;
+    }
+}
+
 
 /* LINE */
 

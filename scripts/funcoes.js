@@ -86,62 +86,77 @@ export function findItem(items, Id){
 // Esta funcao carrega o produto encontrado pela funcao findItem na pagina do produto. Recebe como parametro o produto que será renderizado na pagina do produto
 export function carregaProduto(item){
     let insertProduto = document.querySelector(".img_product_container")
-    let html = `<div class="product_info_image">
-                    <img src="${item.imagemProduto}">
+    let html = `
+        <div class="product_info_image">
+            <img src="${item.imagemProduto}">
+        </div>
+
+        <div class="product_info">
+            <h2>${item.nomeProduto}</h2>
+            <h5>${item.autor}</h5>
+
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+
+            <span>R$ ${item.preco}</span>
+
+            <div class="action-row">
+                <div class="quantity-container">
+                    <button class="qty-btn minus">−</button>
+                    <input type="number" class="qty-input" value="1" min="1">
+                    <button class="qty-btn plus">+</button>
                 </div>
-                <div class="product_info">
-                    <h2>${item.nomeProduto}</h2>
-                    <h5>${item.autor}</h5>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <span>R$ ${item.preco}</span>
-                    <input type="number" name="" id="quantidade" value="1">
-                    <button id="Buy-pd">Comprar</button>
-                    <p>${item.descricaoProduto}</p>
-            </div-->  `
-                insertProduto.innerHTML = html
+
+                <button id="Buy-pd">Comprar</button>
+            </div>
+
+            <p>${item.descricaoProduto}</p>
+        </div>
+    `
+    insertProduto.innerHTML = html
 }
 
 // Esta função adiciona um item ao carrinho: recebe 2 parametros : o carrinho de compras e o produto que sera adicionado
 export function addCarrinho(listaCompras,item, id){
-        let botaoComprar = document.querySelector("#Buy-pd")
-        botaoComprar.addEventListener("click", ()=> {
+    let botaoComprar = document.querySelector("#Buy-pd")
 
-            if(listaCompras.find(item => item.codigoProduto == id)){
-                Swal.fire({
-                    title: 'Item jáadicionado ao carrinho!',
-                    icon: 'success',
-                    backdrop: true,
-                    showConfirmButton: true,
-                    confirmButtonText: 'OK',
-                    });
-                let i = listaCompras.findIndex(item => item.codigoProduto == id)
-                listaCompras[i].quantidade += 1
-                localStorage.setItem("carrinho",JSON.stringify(listaCompras))
+    botaoComprar.addEventListener("click", ()=> {
+
+        if(listaCompras.find(item => item.codigoProduto == id)){
+            Swal.fire({
+                title: 'Item já adicionado ao carrinho!',
+                icon: 'success',
+                showConfirmButton: true,
+            });
+
+            qtyInput.value = 1;
+
+            let i = listaCompras.findIndex(item => item.codigoProduto == id)
+            listaCompras[i].quantidade += 1
+            localStorage.setItem("carrinho",JSON.stringify(listaCompras))
                
-            } else{
-            let quantidade = parseInt(document.querySelector("#quantidade").value)
-            // Nesta linha, capturamos o valor do input quantidade e convertemos para numero, pois recebemos o valor como string
-            //item.quantidade = quantidade   opçao 1 - adicionar a propriedade quantidade ao nosso objeto, e depois fazer o push do item na lista de compras
-            //listaCompras.push(item)
-            listaCompras.push({...item,quantidade}) // opcao 2 - criar um novo objeto com o spread operador, incluindo a propriedade quantidade
-            localStorage.setItem("carrinho",JSON.stringify(listaCompras)) // verificar o link https://warcontent.com/localstorage-javascript/#armazenamento-de-objetos-json
+        } else{
+
+            let quantidade = parseInt(document.querySelector(".qty-input").value)
+
+            listaCompras.push({...item, quantidade})
+
+            localStorage.setItem("carrinho",JSON.stringify(listaCompras))
+
             Swal.fire({
                 title: 'Item adicionado ao carrinho!',
                 icon: 'success',
-                backdrop: true,
                 showConfirmButton: true,
-                confirmButtonText: 'OK',
-                });
-                  
+            });
 
-            }
-              
-        })
+            qtyInput.value = 1;
+        }
+    })
 }
+
 
 export function valorTotalQuantidade (listaCarrinhoDeCompras){
 let soma = 0

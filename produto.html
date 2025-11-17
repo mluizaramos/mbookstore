@@ -77,8 +77,12 @@
                     <h5>Edição Português - Por Charles Duhigg (Autor)</h5>
                     <i class="fa fa-star-o" style="font-size:24px"></i>
                     <span>R$ 29,99</span>
-                    <input type="number" name="" id="" value="1">
-                    <button id="Buy-pd">Comprar</button>
+                    <div class="quantity-container">
+                        <button class="qty-btn minus">−</button>
+                        <input type="number" class="qty-input" value="1" min="1">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="buy-button" id="Buy-pd">Comprar</button>
                     <p>Charles Duhigg, repórter investigativo do New York Times, mostra que a chave para o sucesso é entender como os hábitos funcionam - e como podemos transformá-los.O Poder do Hábito: por que fazemos o que fazemos na vida e nos negócios é um livro de Charles Duhigg, ex-repórter do New York Times, publicado em Fevereiro de 2012 pela Random House. Explora a ciência por trás da criação e reforma de hábitos</p>
                 </a>
             </div-->  
@@ -88,9 +92,9 @@
 
     <!--Início Section 2-->
     <section class="hero2">
+        <hr>
         <div class="hero2-text">
-            <hr>
-            <h2>Veja livros semelhantes</h2>
+            <p class="more-books">Veja livros semelhantes</p>
             <p>Encontre o livro perfeito para você...</p>
         </div>
         <div class="hero2-img">
@@ -98,7 +102,6 @@
             <img src="./Imagens/Livros/pai-rico.webp">
             <img src="./Imagens/Livros/1984.png">
             <img src="./Imagens/Livros/a-paciente.webp">
-            <img src="./Imagens/Livros/mindset.webp">
         </div>
     </section>
     <!--Fim Section 2-->
