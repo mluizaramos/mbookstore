@@ -175,22 +175,39 @@ console.log(soma, quantidade)
 //função para carregar produto no carrinho
 export function carrinhoCompras(ListaCarrinhoDeCompras, carrinho) {
     ListaCarrinhoDeCompras.forEach(item => {
-        // Calcula o subtotal como um número fixo com precisão de duas casas decimais
-        let subtotal = (item.quantidade * item.preco);
-        subtotal = parseFloat(subtotal.toFixed(2)); // Converte para número com precisão de duas casas decimais
 
-        let html = `<li class="cart_item">
-            <img id="cart_img" src="${item.imagemProduto}">
-            <p id="name_product_cart">Livro ${item.nomeProduto}</p>
-            <div class="cart_item_container">
-                <input type="number" name="" id="" value="${item.quantidade}">
-                <span>R$${subtotal}</span>
-                <i class="bi-trash3"></i>
+        let subtotal = (item.quantidade * item.preco);
+        subtotal = parseFloat(subtotal.toFixed(2));
+
+        let html = `
+        <li class="cart_item">
+            
+            <div class="cart_left">
+                <img class="cart_img" src="${item.imagemProduto}">
+                <div class="cart_info">
+                    <p class="cart_title">${item.nomeProduto}</p>
+                    <span class="cart_price">R$ ${subtotal}</span>
+                </div>
             </div>
-        </li>`;
+
+            <div class="cart_right">
+                <i class="bi-trash3 trash"></i>
+
+                <div class="quantity-container cart_qty">
+                    <button class="qty-btn minus">−</button>
+                    <input type="number" class="qty-input" value="${item.quantidade}" min="1">
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+
+        </li>
+        <hr class="cart_divider">
+        `;
+
         carrinho.innerHTML += html;
     });
 }
+
 
 // funçaõ para deletar item quando clicar na lixeira
 export function deletarItem(listaCarrinhoDeCompras,valorTotalQuantidade){

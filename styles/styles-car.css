@@ -94,104 +94,137 @@ body{
 /* --FIM NAVBAR 1--*/
 
 /* -- INICIO SECTION CARRINHO-- */
-.cart_container {
-    padding: 20px 400px 20px 400px;
-    margin-bottom: 80px;
-    display: flex;
+ 
+/* ----- ITEM DO CARRINHO ----- */
+
+.cart_container{
+    padding: 50px 90px;
 }
 
-.btn_area {
-    text-align: right; /* Alinha os botões à direita */
-}
-
-.btn_area a {
-    text-decoration: none; /* Alinha os botões à direita */
-}
-
-.btn_area button{
-    background-color: brown;
-    width: 150px;
-    height: 40px;
-    font-size: 16px;
-    color: #ffffff;
-    border: none;
-    border-radius: 50px;
-}
-.btn_area button:hover{
-    cursor: pointer;
-    transform: scale(1.01);
-    background-color: black;
-
-}
-#finalize{
+.my-cart{
+    font-size: 20px;
     font-weight: 600;
-}
-.cart_item {
-    display:flex;
-    justify-content:space-between;
-    margin-top: 20px;
-    padding:20px 0;
-}
-.cart_item img{
-    width: 115px;
-}
-.titulo-cart h2{
-    color: brown;
-    font-size: 23px;
-    margin-top: 30px;
     margin-bottom: 20px;
-    
-}
-.cart_item p{
-    font-size: 20px;
-    margin-top: 30px;
-   font-weight: 400;
 }
 
-.cart_item span, .qtd_price_area span{
-    font-size: 20px;
-    margin-top:5px;
-    font-weight: 500;
-    
+.products-car-container{
+    padding: 30px;
+    border: 1px solid #d8d8d8;
+    border-radius: 30px;
 }
 
-.cart_item_container {
-    display:flex;
-    align-items: center;
+.cart_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 0;
 }
 
-.cart_item_container i{
+.cart_divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+
+/* LADO ESQUERDO: IMG + TÍTULO + PREÇO */
+.cart_left {
+    display: flex;
+    gap: 16px;
+}
+
+.cart_img {
+    width: 100px;
+    border-radius: 4px;
+}
+
+.cart_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cart_title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.cart_price {
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+/* ----- LADO DIREITO: LIXEIRA + INPUT ----- */
+.cart_right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.cart_right .trash {
+    font-size: 22px;
     cursor: pointer;
 }
 
-.cart_item_container i:hover{
+.cart_right .trash:hover {
     color: brown;
 }
 
-.cart_container h2{
+/* ----- QUANTITY (MESMO DO PRODUTO) ----- */
+.cart_qty {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #d1d1d1;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 32px;
+    background-color: #fff;
+}
+
+.cart_qty .qty-btn {
+    width: 32px;
+    height: 100%;
+    background: #fff;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cart_qty .qty-input {
+    width: 32px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+}
+
+.more-book{
+    display: inline-block;
+    border: 1px solid brown;
+    padding: 6px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 70px;
+    background-color: transparent;
     color: brown;
-    margin-bottom: 30px;
 }
 
-.cart_item_container input{
-    margin:0px;
-    width: 35px;
-    color: brown;
-    font-weight: 600;
-}
-
-.cart_item_container input, .cart_item_container span, .qtd_price_area span{
-    margin-right:30px;
-}
-
-.qtd_price_area {
-    text-align: right;
-    padding: 30px 0;
-    border-top: 1px solid;
-}
-
-.qtd_price_area span{
-    margin-right:54px;
+#finalize {
+    display: inline-block;
+    color:white;
+    background: brown;
+    border: 1px solid transparent;
+    padding: 6px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 70px;
 }
 
 #address_form {
