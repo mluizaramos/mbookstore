@@ -200,14 +200,21 @@ label a{
     .box-mc {
         padding: 20px 0;
         height: auto;
-        min-height: 100vh;
+        min-height: 90vh;
     }
 
     .container-mc {
-        width: 80%;
+        width: 70%;
         padding: 30px 20px;
-        height: 90%;
+        height: 10%;
         margin-bottom: 30px;  
+    }
+
+    .login-sub-title{
+        font-size: 14px;
+        font-weight: 200;
+        color: black;
+        margin-bottom: 30px;
     }
 }
 

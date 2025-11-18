@@ -1,25 +1,22 @@
-import { deletarItem, carrinhoCompras, gerarPedido,valorTotalQuantidade } from "./funcoes.js"
-let listaCarrinhoDeCompras = JSON.parse(localStorage.getItem("carrinho"))
+import { deletarItem, carrinhoCompras, atualizarQuantidade, gerarPedido, valorTotalQuantidade } from "./funcoes.js";
 
-let carrinho = document.querySelector('ul')
+let listaCarrinhoDeCompras = JSON.parse(localStorage.getItem("carrinho"));
+let carrinho = document.querySelector('ul');
 
-let pedidos = JSON.parse(localStorage.getItem("pedidos"))
-if (pedidos == null ){
-    pedidos = []
-}
+// renderizar
+carrinhoCompras(listaCarrinhoDeCompras, carrinho);
 
-//cartIndicator(listaCarrinhoDeCompras)
-carrinhoCompras(listaCarrinhoDeCompras,carrinho)
-deletarItem(listaCarrinhoDeCompras,valorTotalQuantidade,carrinho)
-valorTotalQuantidade(listaCarrinhoDeCompras)
+// eventos de + e -
+atualizarQuantidade(listaCarrinhoDeCompras, carrinho, valorTotalQuantidade);
 
-let btn_finalizar = document.querySelector("#finalize")
-    btn_finalizar.addEventListener("click", () => gerarPedido(listaCarrinhoDeCompras,pedidos))
+// deletar
+deletarItem(listaCarrinhoDeCompras, valorTotalQuantidade, carrinho);
 
+// mostrar totais
+valorTotalQuantidade(listaCarrinhoDeCompras);
 
+let pedidos = JSON.parse(localStorage.getItem("pedidos"));
+if (!pedidos) pedidos = [];
 
-      
-
-    
-    
-
+let btn_finalizar = document.querySelector("#finalize");
+btn_finalizar.addEventListener("click", () => gerarPedido(listaCarrinhoDeCompras, pedidos));

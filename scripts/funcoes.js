@@ -158,19 +158,29 @@ export function addCarrinho(listaCompras,item, id){
 }
 
 
-export function valorTotalQuantidade (listaCarrinhoDeCompras){
-let soma = 0
-let quantidade = 0
-listaCarrinhoDeCompras.forEach(
-  item => {
-    soma += ((item.quantidade * item.preco))
-    quantidade += item.quantidade
-  }  
-)
-document.querySelector(".qtd_price_area span:nth-child(2)").innerHTML = `R$ ${soma}`
-document.querySelector(".qtd_price_area span:first-child").innerHTML = `${quantidade}`
-console.log(soma, quantidade)
+export function valorTotalQuantidade(lista) {
+    let soma = 0;
+    let quantidade = 0;
+
+    lista.forEach(item => {
+        soma += (item.quantidade * item.preco);
+        quantidade += item.quantidade;
+    });
+
+    soma = parseFloat(soma.toFixed(2));
+
+    // atualizar carrinho esquerda
+    document.querySelector(".cart_subtotal").innerHTML = `R$ ${soma.toFixed(2)}`;
+    document.querySelector(".cart_qtd").innerHTML = quantidade;
+
+    // atualizar resumo direita
+    document.querySelector("#resume_subtotal").innerHTML = `R$ ${soma.toFixed(2)}`;
+    document.querySelector("#resume_total").innerHTML = `R$ ${(soma).toFixed(2)}`;
+    document.querySelector("#resume_qtd").innerHTML = quantidade;
+    document.querySelector("#resume_qtd").innerHTML = quantidade;
+
 }
+
 
 //função para carregar produto no carrinho
 export function carrinhoCompras(ListaCarrinhoDeCompras, carrinho) {
@@ -205,6 +215,45 @@ export function carrinhoCompras(ListaCarrinhoDeCompras, carrinho) {
         `;
 
         carrinho.innerHTML += html;
+    });
+}
+
+export function atualizarQuantidade(lista, carrinhoElement, callbackTotal) {
+    carrinhoElement.addEventListener("click", (e) => {
+
+        // BOTÃO +
+        if (e.target.classList.contains("plus")) {
+            let li = e.target.closest(".cart_item");
+            let input = li.querySelector(".qty-input");
+
+            let index = [...carrinhoElement.children]
+                .filter(el => el.classList.contains("cart_item"))
+                .indexOf(li);
+
+            lista[index].quantidade++;
+            input.value = lista[index].quantidade;
+
+            localStorage.setItem("carrinho", JSON.stringify(lista));
+            callbackTotal(lista);
+        }
+
+        // BOTÃO -
+        if (e.target.classList.contains("minus")) {
+            let li = e.target.closest(".cart_item");
+            let input = li.querySelector(".qty-input");
+
+            let index = [...carrinhoElement.children]
+                .filter(el => el.classList.contains("cart_item"))
+                .indexOf(li);
+
+            if (lista[index].quantidade > 1) {
+                lista[index].quantidade--;
+                input.value = lista[index].quantidade;
+
+                localStorage.setItem("carrinho", JSON.stringify(lista));
+                callbackTotal(lista);
+            }
+        }
     });
 }
 

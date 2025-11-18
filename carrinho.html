@@ -69,106 +69,115 @@
     
 <!--Inicio Section 1 -->
 <section class="cart_container cart">
-    <div class="products-car-container">
+    <div class="cart_left_column">
         <div class="titulo-cart">
             <p class="my-cart">Meu carrinho</p>
         </div>
-        <ul>
-            <!-- Produto 1 no carrinho >
-            <li class="cart_item">
-                <img id="cart_img" scr="">
-                <p id="name_product_cart">O Poder do Hábito</p>
-                <div class="cart_item_container">
-                    <input type="number" name="" id="">
-                    <span>R$ 29,99</span>
-                    <i class="bi-trash3"></i>
-                </div>
-            </li>
-            < Produto 2 no carrinho ->
-            <li class="cart_item">
-                <img id="cart_img" scr="">
-                <p>A Biblioteca da Meia-Noite</p>
-                <div class="cart_item_container">
-                    <input type="number" name="" id="">
-                    <span>R$ 32,99</span>
-                    <i class="bi-trash3"></i>
-                </div>
-            </li>-->
-        </ul>
+
+        <ul id="cart_list"></ul>
+
         <!-- Valor total carrinho -->
         <div class="qtd_price_area">
-            <span>0</span>
-            <span>R$ 00,00</span>
+            <span class="cart_qtd">0</span>
+            <span class="cart_subtotal">R$ 00,00</span>
+        </div>
+    </div>
+
+    <!-- RESUMO DO PEDIDO -->
+    <aside class="resume-car-container">
+        <h3 class="resume_title">Resumo do Pedido</h3>
+
+        <div class="resume_line">
+            <span>Quantidade de itens:</span>
+            <span id="resume_qtd">0</span>
+        </div>
+
+        <div class="resume_line">
+            <span>Subtotal:</span>
+            <span id="resume_subtotal">R$ 00,00</span>
+        </div>
+
+        <hr>
+
+        <div class="resume_total">
+            <span>Total:</span>
+            <span id="resume_total">R$ 0,00</span>
         </div>
 
         <div class="btn_area">
             <a href="livros_produtos.html"><button class="more-book">Ver Mais Produtos</button></a>
             <button id="finalize">Finalizar</button>
         </div>
-    </div>    
+        
+    </aside>
 </section>
 <!--Fim Section 1 -->
 
 <!--Inicio Section 2 -->
-<section class="cart_container ">
-    <!--Informações sobre entrega-->
-    <div>
-        <h2>Endereço de Entrega</h2>
+<section class="cart_container_address">
+    <div class="container-form-address">
+
+        <p class="title-address">Preencha as informações</p>
+
+        <form action="" id="address_form">
+
+            <input type="text" id="nome" name="name" placeholder="Nome Completo">
+
+            <select id="genero" onchange="selecionarGenero()" name="genero">
+                <option value="" disabled selected>Selecione o Gênero</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+            </select>
+
+            <input type="text" id="logradouro" name="logradouro" placeholder="Logradouro">
+
+            <input type="text" id="complement" name="complement" placeholder="Complemento">
+
+            <input type="text" id="bairro" name="bairro" placeholder="Bairro">
+
+            <input type="text" id="cidade" name="cidade" placeholder="Cidade">
+
+            <select id="estado" onchange="selecionarEstado()" name="estado">
+                <option value="" disabled selected>Estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+
+            <input type="text" id="CEP" name="CEP" placeholder="CEP">
+
+            <input type="text" id="telefone" name="telefone" placeholder="Telefone">
+
+            <input type="email" id="email" name="email" placeholder="E-mail">
+
+        </form>
+
     </div>
-    <form action="" id="address_form">
-        <label for="name">Nome Completo:</label>
-        <input type="text" id="nome" name="name">
-        <label for="name">Gênero:</label>
-        <select id="genero" onchange="selecionarGenero()" name="genero">
-            <option value="masculino">Masculino</option>
-            <option value="feminino">Feminino</option>
-            <option value="outro">Outro</option>
-          </select>
-        <label for="logradouro">Logradouro:</label>
-        <input type="text" id="logradouro" name="logradouro">
-        <label for="Cidade">Complemento:</label>
-        <input type="text" id="complement" name="complement">
-        <label for="bairro">Bairro:</label>
-        <input type="text" id="bairro" name="bairro">
-        <label for="cidade">Cidade:</label>
-        <input type="text" id="cidade" name="cidade">
-        <label for="estado">Estado:</label>
-        <select id="estado" onchange="selecionarEstado()" name="estado">
-            <option value="AC">Acre</option>
-            <option value="AL">Alagoas</option>
-            <option value="AP">Amapá</option>
-            <option value="AM">Amazonas</option>
-            <option value="BA">Bahia</option>
-            <option value="CE">Ceará</option>
-            <option value="DF">Distrito Federal</option>
-            <option value="ES">Espírito Santo</option>
-            <option value="GO">Goiás</option>
-            <option value="MA">Maranhão</option>
-            <option value="MT">Mato Grosso</option>
-            <option value="MS">Mato Grosso do Sul</option>
-            <option value="MG">Minas Gerais</option>
-            <option value="PA">Pará</option>
-            <option value="PB">Paraíba</option>
-            <option value="PR">Paraná</option>
-            <option value="PE">Pernambuco</option>
-            <option value="PI">Piauí</option>
-            <option value="RJ">Rio de Janeiro</option>
-            <option value="RN">Rio Grande do Norte</option>
-            <option value="RS">Rio Grande do Sul</option>
-            <option value="RO">Rondônia</option>
-            <option value="RR">Roraima</option>
-            <option value="SC">Santa Catarina</option>
-            <option value="SP">São Paulo</option>
-            <option value="SE">Sergipe</option>
-            <option value="TO">Tocantins</option>
-          </select>
-        <label for="estado">CEP:</label>
-        <input type="text" id="CEP" name="CEP">
-        <label for="telefone">Telefone:</label>
-        <input type="text" id="telefone" name="telefone">
-        <label for="e-mail">E-mail:</label>
-        <input type="email" id="email" name="email">
-    </form>
 </section>
 <!--Fim Section 2 -->
 </main>
